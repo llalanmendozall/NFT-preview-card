@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+
+    --Very-dark-blue-mainBG: hsl(217, 54%, 11%);
+    --Very-dark-blue-cardBG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+
+p {
+    font-size: 18px;
+    color: var(--Soft-blue);
+
+    opacity: .7;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+body {
+    background: var(--Very-dark-blue-mainBG);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 380px;
+}
+
+.card {
+    background: var(--Very-dark-blue-cardBG);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: -2px 41px 12px 16px rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: -2px 41px 12px 16px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: -2px 41px 12px 16px rgba(0, 0, 0, 0.18);
+}
+
+.img-top {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.img-top img {
+    width: 100%;
+    display: block;
+}
+
+.img-top::after {
+    content: url(./images/icon-view.svg);
+    position: absolute;
+    inset: 0;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0;
+    will-change: opacity;
+
+}
+
+.img-top:hover {
+    opacity: 1;
+}
+
+.card-title {
+    color: var(--White);
+}
+
+.card-paragraph {
+    margin-top: 10px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+#price-details {
+    color: var(--Cyan);
+    font-weight: 400;
+    text-shadow: 0px 0px 2px var(--Cyan);
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+
+}
+
+.img-bottom {
+    width: 10%;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#author {
+    color: var(--Soft-blue);
+}
+
+.by {
+    color: var(--White);
+    font-weight: 300;
+    margin-left: 5px;
+}
